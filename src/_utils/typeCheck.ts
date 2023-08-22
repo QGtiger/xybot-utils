@@ -44,3 +44,11 @@ export function isArrLike(val: any) {
 
   return isNum(len) && len >= 0 && !isFn(val);
 }
+
+export function isBrowser() {
+  return (
+    typeof window === 'object' &&
+    typeof document === 'object' &&
+    document.nodeType === 9
+  );
+}
